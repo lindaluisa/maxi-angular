@@ -4,8 +4,8 @@
     type="text"
     class="form-control"
     (input)="onUpdateServerName($event)">
-<p> {{ serverName }} </p>
 <br>
+<p> {{ serverName }} </p>
 <br>
 
 <label for="">Two-way Binding</label>
@@ -13,7 +13,6 @@
     type="text"
     class="form-control"
     [(ngModel)]="serverName">
-
 <br>
 <br>
 
@@ -23,14 +22,17 @@
     (click)="onCreateServer($event)">
     Add Server</button>
     <br>
-    <p> {{ serverCreationStatus }} </p>
+<!--     <p> {{ serverCreationStatus }} </p> -->
     <hr>
     <p> String Interpolation: {{allowNewServer}}</p>
     <p>Property Binding:</p>
     <p [innerText]="allowNewServer"></p>
     <hr>
 
-<!-- <p [innerText]="allowNewServer"> </p> -->
+<div *ngIf="serverCreated; else noServer"> Server was created, server name is {{ serverName }}. </div>
+<ng-template #noServer> 
+    No server was created!
+</ng-template>
 <br>
 
 <label for="">Server Component </label>
