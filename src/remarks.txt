@@ -1,0 +1,3 @@
+NOTES
+
+// Choosing the correct decorator for custom property binding (Input() vs. Output())

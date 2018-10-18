@@ -36,8 +36,9 @@
 <br>
 
 <label for="">Server Component </label>
-<app-server></app-server>
-<app-server></app-server>
+<app-server *ngFor="let server of servers">
+    {{servers}}
+</app-server>
 
 
 <!-- (input)="onUpdateServerName($event)" -->
