@@ -14,7 +14,7 @@ import {
 export class BetterHighlightDirective implements OnInit {
   @Input() defaultColor: string = 'transparent';
   @Input('appBetterHighlight') highlightColor: string = 'blue';
-  @HostBinding('style.backgroundColor') backgroundColor: string = this.highlightColor; 
+  @HostBinding('style.backgroundColor') backgroundColor: string; 
   constructor(private elRef: ElementRef, private renderer: Renderer2) { }
   
   ngOnInit() {
