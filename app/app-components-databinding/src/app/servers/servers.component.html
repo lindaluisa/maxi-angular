@@ -1,0 +1,44 @@
+<label for="">Server Name</label>
+
+<input 
+    type="text"
+    class="form-control"
+    (input)="onUpdateServerName($event)">
+<br>
+<p> {{ serverName }} </p>
+<br>
+
+<label for="">Two-way Binding</label>
+<input 
+    type="text"
+    class="form-control"
+    [(ngModel)]="serverName">
+<br>
+<br>
+
+<button 
+    class="btn btn-primary" 
+    [disabled]='!allowNewServer' 
+    (click)="onCreateServer($event)">
+    Add Server</button>
+    <br>
+<!--     <p> {{ serverCreationStatus }} </p> -->
+    <hr>
+    <p> String Interpolation: {{allowNewServer}}</p>
+    <p>Property Binding:</p>
+    <p [innerText]="allowNewServer"></p>
+    <hr>
+
+<div *ngIf="serverCreated; else noServer"> Server was created, server name is {{ serverName }}. </div>
+<ng-template #noServer> 
+    No server was created!
+</ng-template>
+<br>
+
+<label for="">Server Component </label>
+<app-server *ngFor="let server of servers">
+    {{servers}}
+</app-server>
+
+
+<!-- (input)="onUpdateServerName($event)" -->
