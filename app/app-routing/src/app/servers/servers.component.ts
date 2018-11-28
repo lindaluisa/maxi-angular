@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ServersService } from './servers.service';
-import { Router, ActivatedRoute } from '@angular/router'; // injects currently active rout
+import { Router, ActivatedRoute } from '@angular/router'; // injects currently active route
 
 @Component({
   selector: 'app-servers',
