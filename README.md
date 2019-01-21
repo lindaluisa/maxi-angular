@@ -2,7 +2,7 @@
 Udemy Course - Angular 6 
 
 
-Forms
+Forms</br>
 [X] Template-driven approach</br>
 [X] ngForm</br>
 [X] HTML in-built validators</br>
