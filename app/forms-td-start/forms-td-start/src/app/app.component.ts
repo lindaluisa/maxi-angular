@@ -14,7 +14,24 @@ export class AppComponent {
 
   suggestUserName() {
     const suggestedName = 'Superuser';
-  }s
+    // when you click and user input already there, it overrides content
+    // setValue: set whole form
+    // patchValue: overwrite parts of form
+/*     this.signupForm.setValue({ 
+      userData: {
+        username: suggestedName,
+        email: ''
+      },
+      secret: 'pet',
+      questionAnswer: '',
+      gender: 'male'
+    }); */
+    this.signupForm.form.patchValue({
+      userData: {
+        username: suggestedName
+      }
+    });
+  }
 
   
   /*   onSubmit(form: NgForm) {
