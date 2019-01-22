@@ -19,3 +19,5 @@ Reactive approach</br>
 - [X] Username Validation</br>
 - [X] async validation for emails using promises</br>
 - [X] tracking valueChanges and statusChanges</br>
+- [X] setValue (whole form) and patchValue (parts) to pre-populate form</br>
+- [X] resetting form </br>
