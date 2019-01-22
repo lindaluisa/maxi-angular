@@ -18,4 +18,4 @@ Reactive approach</br>
 - [X] FormArray</br>
 - [X] Username Validation</br>
 - [X] async validation for emails using promises</br>
-- [ ] </br>
+- [X] tracking valueChanges and statusChanges</br>
