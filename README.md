@@ -13,7 +13,9 @@ Template Driven Approach</br>
 
 Reactive approach</br>
 - [X] Reactive form setup</br>
-- [ ] </br>
-- [ ] </br>
-- [ ] </br>
+- [X] FormGroup</br>
+- [X] FormControl</br>
+- [X] FormArray</br>
+- [X] Username Validation</br>
+- [X] async validation for emails using promises</br>
 - [ ] </br>
