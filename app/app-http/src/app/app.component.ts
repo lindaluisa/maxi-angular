@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ServerService } from './server.service'
+import { ServerService } from './server.service';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +7,8 @@ import { ServerService } from './server.service'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  servers = [
+  appName = this.serverService.getAppName();
+  servers: any[] = [
     {
       name: 'Testserver',
       capacity: 10,
@@ -42,7 +43,7 @@ constructor(private serverService: ServerService) {}
   onGet() {
     this.serverService.getServers()
       .subscribe(
-        (servers: any[]) => console.log(servers),
+        (servers: any[]) => this.servers = servers,
         (error) => console.log(error)
       );
   }
